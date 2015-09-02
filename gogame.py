@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-import app
+from app import App
 
-class GoGame(app.App):
+class GoGame(App):
   # Go commands
   def drawGrid(self, params=[]):
     print 'pretend this sentence is a gameboard.'
@@ -17,7 +17,7 @@ class GoGame(app.App):
     }
 
   def __init__(self):
-    app.App.__init__(self)
+    App.__init__(self)
     self.inputMap.update(self.makeInputMap())
     # self.gamestate = gamestate.Gamestate()
 
