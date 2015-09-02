@@ -10,22 +10,20 @@
 # g = c.Game()
 # g.do('ls')
 # g.ui()
-#
-
-# I could standardize, i know.
-# Eg i could just list out all possible messages like an enum.
-# I'm allowing several so i dont have to look up what i chose, when extending.
-# TODO could store these as all lowercase.
-
-# If parseInput() returns one of these strings, end the repl.
-closeResponses = ['closeUi', 'quit', 'close', 'exit', 'done']
-parseFailResponses = ['cantParse', 'parseFail', 'noParse']
 
 class App:
+  # I could standardize, i know.
+  # Eg i could just list out all possible messages like an enum.
+  # I'm allowing several so i dont have to look up what i chose, when extending.
+  # TODO could store these as all lowercase.
+  # If parseInput() returns one of these strings, end the repl.
+  closeResponses = ['closeUi', 'quit', 'close', 'exit', 'done']
+  parseFailResponses = ['cantParse', 'parseFail', 'noParse']
+
   # One of the app's command functions.
   def closeUi(self, params=[]):
     # Arbitrary element.
-    return closeResponses[0]
+    return App.closeResponses[0]
 
   def makeUniversalInputMap(self):
     return {
@@ -62,9 +60,9 @@ class App:
       rawinput = raw_input('> ')
       print ''
       commandResponse = self.parseInput(rawinput)
-      if commandResponse in closeResponses:
+      if commandResponse in App.closeResponses:
         done = True
-      elif commandResponse in parseFailResponses:
+      elif commandResponse in App.parseFailResponses:
         print 'Sorry, i dont understand what youre saying.'
 
     print 'Closing app interface. Farewell.'
