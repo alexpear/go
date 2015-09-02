@@ -39,8 +39,6 @@ class App:
     if len(rawInput) <= 0:
       return 'cantParse'
 
-    # print ''
-    cleanedInput = rawInput.lower().strip()
     words = rawInput.lower().split()
     firstWord = words[0]
 
