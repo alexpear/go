@@ -59,7 +59,6 @@ class App:
     print ''
     done = False
     while not done:
-      print ''
       rawinput = raw_input('> ')
       print ''
       commandResponse = self.parseinput(rawinput)
