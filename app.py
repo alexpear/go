@@ -43,9 +43,12 @@ class App:
     firstWord = words[0]
 
     if firstWord in self.inputMap:
-      # self.inputMap[firstWord](words[1:])
-      # TODO transform string input to params in some way
-      pass
+      uiFunction = self.inputMap[firstWord]
+      paramsList = words[1:]
+      responseStr = uiFunction(paramsList)
+      return responseStr
+    else:
+      return 'cantParse'
 
   # Convenience function
   def do(self, command):
