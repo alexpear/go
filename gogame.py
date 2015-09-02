@@ -5,7 +5,7 @@ import app
 class GoGame(app.App):
   # Go commands
   def drawGrid(self, params=[]):
-  	pass
+    print 'pretend this sentence is a gameboard.'
 
   def makeInputMap(self):
     return {
