@@ -26,14 +26,14 @@ def closeUi(paramsList=[]):
   # Arbitrary element.
   return closeResponses[0]
 
-def universalInputMap():
+def makeUniversalInputMap():
   return {
     'quit': closeUi
   }
 
 class App:
   def __init__(self):
-    self.inputMap = universalInputMap()
+    self.inputMap = makeUniversalInputMap()
 
   def parseInput(self, rawInput):
     if len(rawInput) <= 0:
