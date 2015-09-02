@@ -21,19 +21,19 @@
 closeResponses = ['closeUi', 'quit', 'close', 'exit', 'done']
 parseFailResponses = ['cantParse', 'parseFail', 'noParse']
 
-# One of the app's command functions.
-def closeUi(paramsList=[]):
-  # Arbitrary element.
-  return closeResponses[0]
-
-def makeUniversalInputMap():
-  return {
-    'quit': closeUi
-  }
-
 class App:
+  # One of the app's command functions.
+  def closeUi(self, params=[]):
+    # Arbitrary element.
+    return closeResponses[0]
+
+  def makeUniversalInputMap(self):
+    return {
+      'quit': self.closeUi
+    }
+
   def __init__(self):
-    self.inputMap = makeUniversalInputMap()
+    self.inputMap = self.makeUniversalInputMap()
 
   def parseInput(self, rawInput):
     if len(rawInput) <= 0:
