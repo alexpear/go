@@ -69,7 +69,3 @@ class App:
 
     print 'Closing app interface. Farewell.'
     print ''
-
-# For testing:
-app = App()
-app.ui()
