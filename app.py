@@ -12,9 +12,18 @@
 # g.ui()
 #
 
-closeReponses = {'closeUi', 'quit', 'close', 'exit', 'done'}
+# I could standardize, i know.
+# Eg i could just list out all possible messages like an enum.
+# I'm allowing several so i dont have to look up what i chose, when extending.
+# TODO could store these as all lowercase.
 
-def closeUi():
+# If parseInput() returns one of these strings, end the repl.
+closeResponses = ['closeUi', 'quit', 'close', 'exit', 'done']
+parseFailResponses = ['cantParse', 'parseFail', 'noParse']
+
+# One of the app's command functions.
+def closeUi(paramsList=[]):
+  # Arbitrary element.
   return closeResponses[0]
 
 def universalInputMap():
