@@ -37,7 +37,7 @@ class App:
 
   def parseInput(self, rawInput):
     if len(rawInput) <= 0:
-      return 'invalid'
+      return 'cantParse'
 
     # print ''
     cleanedInput = rawInput.lower().strip()
