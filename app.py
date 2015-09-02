@@ -61,7 +61,7 @@ class App:
     while not done:
       rawinput = raw_input('> ')
       print ''
-      commandResponse = self.parseinput(rawinput)
+      commandResponse = self.parseInput(rawinput)
       if commandResponse in closeResponses:
         done = True
     print 'Closing app interface. Farewell.\n'
