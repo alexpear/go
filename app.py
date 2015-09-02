@@ -56,9 +56,9 @@ class App:
 
   # Launch the app-specific repl for ease of typing
   def ui(self):
-    print ''
     done = False
     while not done:
+      print ''
       rawinput = raw_input('> ')
       print ''
       commandResponse = self.parseInput(rawinput)
@@ -66,7 +66,6 @@ class App:
         done = True
       elif commandResponse in parseFailResponses:
         print 'Sorry, i dont understand what youre saying.'
-        print ''
 
     print 'Closing app interface. Farewell.'
     print ''
