@@ -64,4 +64,13 @@ class App:
       commandResponse = self.parseInput(rawinput)
       if commandResponse in closeResponses:
         done = True
-    print 'Closing app interface. Farewell.\n'
+      elif commandResponse in parseFailResponses:
+        print 'Sorry, i dont understand what youre saying.'
+        print ''
+
+    print 'Closing app interface. Farewell.'
+    print ''
+
+# For testing:
+app = App()
+app.ui()
