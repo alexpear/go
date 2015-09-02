@@ -2,16 +2,20 @@
 
 import app
 
-class GoGame(App):
+class GoGame(app.App):
   # Go commands
   def drawGrid(self, params=[]):
   	pass
 
   def makeInputMap(self):
-  	return {
-  	  'ls': drawGrid
-  	}
+    return {
+      'ls': self.drawGrid
+    }
 
   def __init__(self):
-  	App.__init__(self)
-  	self.inputMap.update(makeInputMap())
+    app.App.__init__(self)
+    self.inputMap.update(self.makeInputMap())
+
+# for testing
+game = GoGame()
+game.ui()
