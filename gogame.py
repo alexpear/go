@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 from app import App
+from gamestate import Gamestate
 
 class GoGame(App):
   # Go commands
@@ -19,7 +20,7 @@ class GoGame(App):
   def __init__(self):
     App.__init__(self)
     self.inputMap.update(self.makeInputMap())
-    # self.gamestate = gamestate.Gamestate()
+    self.gamestate = Gamestate()
 
 # for testing
 game = GoGame()
