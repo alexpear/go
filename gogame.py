@@ -8,8 +8,11 @@ class GoGame(App):
   def drawGrid(self, params=[]):
     print 'pretend this sentence is a gameboard.'
 
+  # put(['[4,3]', 'w'])
   def put(self, params=[]):
-    pass
+    # TODO this function needs asserts.
+
+    # self.gamestate.put
 
   def makeInputMap(self):
     return {
