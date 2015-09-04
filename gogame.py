@@ -17,6 +17,11 @@ class GoGame(App):
   def makeInputMap(self):
     return {
       'ls': self.drawGrid,
+      'look': self.drawGrid,
+      'draw': self.drawGrid,
+      'grid': self.drawGrid,
+      'board': self.drawGrid,
+      'show': self.drawGrid,
       'put': self.put
     }
 
