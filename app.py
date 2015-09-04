@@ -26,6 +26,7 @@ class App:
     return App.closeResponses[0]
 
   def makeUniversalInputMap(self):
+    # TODO: i could change this to: a map from functions to lists of valid commands.
     return {
       'quit': self.closeUi
     }
@@ -41,6 +42,7 @@ class App:
     firstWord = words[0]
 
     if firstWord in self.inputMap:
+      # TODO could also check in case-insensitive way.
       uiFunction = self.inputMap[firstWord]
       paramsList = words[1:]
       responseStr = uiFunction(paramsList)

@@ -25,6 +25,7 @@ class Gamestate:
     columnIndexLine = '  c ' + ' '.join([str(c) for c in range(self.width())])
     dashesLine = 'r   ' + ' '.join(['-' for i in range(self.height())])
 
+    # TODO This could be replaced with a funct that returns a string.
     print ''
     print columnIndexLine
     print dashesLine
