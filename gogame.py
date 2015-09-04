@@ -6,7 +6,7 @@ from gamestate import Gamestate
 class GoGame(App):
   # Go commands
   def drawGrid(self, params=[]):
-    print 'pretend this sentence is a gameboard.'
+    self.gamestate.printGrid()
 
   # put(['[4,3]', 'w'])
   def put(self, params=[]):
